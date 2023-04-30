@@ -1,0 +1,194 @@
+:root {
+  --color-brand--1: #2883fa;
+  --color-brand--2: #00c46a;
+  --color-brand--3: #ff0000;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+  --color-light--4: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-brand--1);
+  font-weight: 400;
+  height: 70vh;
+  overscroll-behavior-y: none;
+  background-color: #fff;
+  padding: 2.5rem;
+  display: flex;
+  margin: 8rem 8rem;
+}
+
+a:link,
+a:visited {
+  color: var(--color-brand--1);
+}
+
+.container {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 3rem 1rem;
+    padding: 0;
+  }
+  .container {
+    display: block;
+    text-align: -webkit-center;
+  }
+
+  .store-list {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.header {
+  margin: 2.5rem 0;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.store-list {
+  flex-basis: 40rem;
+  background-color: var(--color-light--4);
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.logo {
+  height: 5.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.add-new-store {
+  width: 50%;
+}
+.form-group {
+  margin-bottom: 0.3rem;
+}
+
+.store-list {
+  list-style: none;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.store-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.store-list ul.store-ul-list {
+  padding: 0 1rem;
+  list-style-type: none;
+}
+
+.store-list .store-item {
+  cursor: pointer;
+  margin-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(97, 128, 211, 0.582);
+}
+
+store-list li:last-child .store-item {
+  border: none;
+}
+
+.store-list .store-item a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-brand--1);
+  font-weight: bold;
+}
+
+.store-list .store-item p {
+  font-size: 12px;
+  color: var(--color-dark--1);
+  margin-bottom: 0.5rem !important;
+}
+
+.store-form {
+  background-color: var(--color-light--1);
+  border-radius: 5px;
+  margin-bottom: 0.75rem;
+  transition: all 0.5s, transform 1ms;
+}
+
+.form__label {
+  flex: 0 0 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.3rem 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light--3);
+  transition: all 0.2s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: var(--color-light--4);
+}
+
+#map {
+  /* flex: 1; */
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-light--1);
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--2);
+  color: var(--color-light--1);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 1.2rem;
+}
+
+.leaflet-popup .leaflet-popup-content h2 {
+  color: var(--color-brand--1);
+  font-weight: 600;
+}
+
+.leaflet-popup .leaflet-popup-content a {
+  color: var(--color-brand--2);
+  text-decoration: none;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
